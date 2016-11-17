@@ -1,0 +1,25 @@
+//////////////////////////////////////////
+/// triangle
+//////////////////////////////////////////
+@mixin triangle($direction, $size, $color)
+	content: ''
+	display: block
+	width: 0
+	border: $size solid transparent
+	//
+	@if $direction == top
+		border-bottom-color: $color
+	@if $direction == bottom
+		border-top-color: $color
+	@if $direction == right
+		border-left-color: $color
+	@if $direction == left
+		border-right-color: $color
+//////////////////////////////////////////
+/// font
+//////////////////////////////////////////
+@mixin font($font-family, $font-size, $line-height, $font-weight)
+	font-family: $font-family
+	font-size: $font-size
+	line-height: $line-height
+	font-weight: $font-weight		
